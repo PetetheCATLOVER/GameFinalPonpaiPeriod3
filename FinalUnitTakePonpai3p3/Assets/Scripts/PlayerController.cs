@@ -2,37 +2,37 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Private Variables
-    private float speed = 10.0f;
-    private float turnSpeed = 25.0f;
-    private float horizontal1Input;
-    private float fowardInput;
-    public Camera mainCamera;
-    public Camera hoodCamera;
-    public KeyCode switchKey;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float acceleration = 1200f;
+    public float steering = 20f;
+    public float maxSpeed = 25f;
+    public float drag = 2f;
+
+    private Rigidbody rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = new Vector3(0, -0.5f, 0); // more stability
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-         // this is where we get player input
-        horizontal1Input = Input.GetAxis("Horizontal");
-        fowardInput = Input.GetAxis("Vertical");
+        float move = Input.GetAxis("Vertical");   // W / S
+        float turn = Input.GetAxis("Horizontal"); // A / D
 
-        // We'll move this vecihle foward
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * fowardInput);
-        // We turn the vehicle
-        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontal1Input);
-
-        if(Input.GetKeyDown(switchKey))
+        // Limit speed
+        if (rb.velocity.magnitude < maxSpeed)
         {
-            mainCamera.enabled = !mainCamera.enabled;
-            hoodCamera.enabled = !hoodCamera.enabled;
-        } 
-    }
-    }
+            rb.AddForce(transform.forward * move * acceleration * Time.fixedDeltaTime);
+        }
 
+        // Smooth turning
+        if (rb.velocity.magnitude > 1f)
+        {
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(0f, turn * steering * Time.fixedDeltaTime, 0f));
+        }
+
+        // Natural drag (smooth slowdown)
+        rb.velocity = Vector3.Lerp(rb.velocity, rb.velocity * 0.98f, drag * Time.fixedDeltaTime);
+    }
+}

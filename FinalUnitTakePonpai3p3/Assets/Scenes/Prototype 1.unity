@@ -548,7 +548,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f25e508ef5354018a9444e3569f1ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1820669294}
+  target: {fileID: 1820669303}
+  distance: 8
+  height: 5
+  followDamping: 5
+  rotationDamping: 5
+  lookAheadDistance: 14
 --- !u!114 &534669908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1850,6 +1855,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 194810, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1820669299}
+    - targetCorrespondingSourceObject: {fileID: 194810, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1820669304}
   m_SourcePrefab: {fileID: 100100000, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
 --- !u!1 &1776773695
 GameObject:
@@ -1976,9 +1984,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32da1ae0542c945e1932cfc0d346b870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  hoodCamera: {fileID: 0}
-  switchKey: 0
+  acceleration: 800
+  steering: 25
+  maxSpeed: 35
+  drag: 2
+--- !u!4 &1820669303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 428284, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+  m_PrefabInstance: {fileID: 1742408053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1820669304
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820669294}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1823947542
 GameObject:
   m_ObjectHideFlags: 0
