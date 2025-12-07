@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 2326272}
   - component: {fileID: 4553097992365807418}
   - component: {fileID: 349109981785698338}
+  - component: {fileID: 2397517642419380058}
   m_Layer: 0
   m_Name: Veh_Armor_Car_01
   m_TagString: Untagged
@@ -137,8 +138,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104122}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.03878718, y: -0.7056144, z: -0.082838915, w: 0.70266753}
+  m_LocalPosition: {x: 216.14722, y: 0.094827175, z: 201.11945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -149,7 +150,7 @@ Transform:
   - {fileID: 471612}
   - {fileID: 2745430570165285832}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.577, y: -89.931, z: -9.874}
 --- !u!33 &3306576
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -237,6 +238,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddd95af1654e401199aae3580daa1e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  moveForce: 1500
+  turnSpeed: 5
+  maxSpeed: 25
+  ramDistance: 6
+--- !u!54 &2397517642419380058
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104122}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &118946
 GameObject:
   m_ObjectHideFlags: 0
