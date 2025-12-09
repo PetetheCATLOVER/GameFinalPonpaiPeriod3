@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool hasPowerup;
+
     public float moveSpeed = 10f;
     public float turnSpeed = 100f;
 
@@ -15,5 +17,14 @@ public class PlayerController : MonoBehaviour
 
         // Turn left/right
         transform.Rotate(Vector3.up * turn * turnSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Powerup"))
+        {
+            hasPowerup = true;
+            Destroy(other.gameObject);
+        }
     }
 }
