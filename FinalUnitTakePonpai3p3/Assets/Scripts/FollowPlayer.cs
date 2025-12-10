@@ -3,6 +3,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public bool hasPowerup;
+    private float powerupStrength = 15.0f;
 
     public Transform target;   // Drag your car here in Inspector
     public Vector3 offset = new Vector3(0, 5, -7);
@@ -33,7 +34,12 @@ public class CameraFollow : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy") && hasPowerup)
         {
+            Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position);
+
             Debug.Log("Collided with: " +  collision.gameObject.name + " with powerup set to " + hasPowerup);
+            enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
+
     }
 }
