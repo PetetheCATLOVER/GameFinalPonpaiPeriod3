@@ -1,45 +1,50 @@
 using UnityEngine;
 
-public class CarSpawner : MonoBehaviour
+public class NpcSpawner : MonoBehaviour
 {
-    [Header("Npc Prefabs")]
-    public GameObject[] NpcPrefabs;          
+    public GameObject npcPrefab;
+    public int spawnAmount = 10;
+    public Vector2 spawnAreaSize = new Vector2(100, 100);
+    public LayerMask roadLayer;  // assign Road layer in Inspector
 
-    [Header("Spawn Settings")]
-    public Transform[] spawnPoints;          
-    public float spawnInterval = 2f;         
-    public bool autoSpawn = true;            
-
-    private float timer;
-
-    void Update()
+    void Start()
     {
-        if (!autoSpawn) return;
+        SpawnNPCs();
+    }
 
-        timer += Time.deltaTime;
-
-        if (timer >= spawnInterval)
+    void SpawnNPCs()
+    {
+        for (int i = 0; i < spawnAmount; i++)
         {
-            SpawnNpc();
-            timer = 0f;
+            Vector3 spawnPos = GetValidSpawnPosition();
+            Instantiate(npcPrefab, spawnPos + Vector3.up * 3f, Quaternion.identity);
         }
     }
 
-    public void SpawnNpc()
+    Vector3 GetValidSpawnPosition()
     {
-        if (NpcPrefabs.Length == 0 || spawnPoints.Length == 0)
+        Vector3 pos;
+        int safety = 0; // avoid infinite loops
+
+        do
         {
-            Debug.LogWarning("NpcSpawner: Assign NpcPrefabs and spawnPoints!");
-            return;
-        }
+            float x = Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2);
+            float z = Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2);
 
-        // Pick a random car
-        GameObject NpcToSpawn = NpcPrefabs[Random.Range(0, NpcPrefabs.Length)];
-        // Pick a random spawn point
-        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            pos = new Vector3(x, 0, z);
+            safety++;
 
-        // Spawn the car
-        Instantiate(NpcToSpawn, spawnPoint.position, spawnPoint.rotation);
+            // Prevent endless checking if something goes wrong
+            if (safety > 50) break;
+
+        } while (IsOnRoad(pos));
+
+        return pos;
+    }
+
+    bool IsOnRoad(Vector3 position)
+    {
+        // raycast down to see if it hits the road layer
+        return Physics.Raycast(position + Vector3.up * 10f, Vector3.down, 20f, roadLayer);
     }
 }
-
