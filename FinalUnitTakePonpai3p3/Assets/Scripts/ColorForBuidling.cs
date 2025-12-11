@@ -9,7 +9,7 @@ public class ColorForNpc3 : MonoBehaviour
         Renderer renderer = GetComponent<Renderer>();
 
         // Change the color to red
-        renderer.material.color = Color.red;
+        renderer.material.color = Color.white;
     }
 
     // Update is called once per frame
