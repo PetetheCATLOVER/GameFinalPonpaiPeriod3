@@ -17,7 +17,7 @@ public class NpcSpawner : MonoBehaviour
         for (int i = 0; i < spawnAmount; i++)
         {
             Vector3 spawnPos = GetValidSpawnPosition();
-            Instantiate(npcPrefab, spawnPos + Vector3.up * 3f, Quaternion.identity);
+            Instantiate(npcPrefab, spawnPos + Vector3.up * 6f, Quaternion.identity);
         }
     }
 
