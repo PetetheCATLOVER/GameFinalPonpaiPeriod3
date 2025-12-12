@@ -602,7 +602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f25e508ef5354018a9444e3569f1ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasPowerup: 0
   target: {fileID: 1820669303}
   offset: {x: 0, y: 5, z: -7}
   smoothSpeed: 5
