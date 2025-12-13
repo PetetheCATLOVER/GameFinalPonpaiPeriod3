@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public bool hasPowerup = false;
     private float powerupStrength = 15.0f;
+    public GameObject projectilePrefab;
     
 
     public float moveSpeed = 10f;
@@ -21,7 +22,11 @@ public class PlayerController : MonoBehaviour
         // Turn left/right
         transform.Rotate(Vector3.up * turn * turnSpeed * Time.deltaTime);
 
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // Launch a projectile from the player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,4 +58,6 @@ public class PlayerController : MonoBehaviour
             enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
     }
+
+
 }

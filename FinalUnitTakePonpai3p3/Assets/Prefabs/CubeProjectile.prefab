@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2298920971238724235}
   - component: {fileID: 4892389732261683601}
   - component: {fileID: 8807262718197714433}
+  - component: {fileID: 8694162250274001476}
+  - component: {fileID: -8483586260180651732}
   m_Layer: 0
   m_Name: CubeProjectile
   m_TagString: Untagged
@@ -136,3 +138,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8694162250274001476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468530239225202200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa518d63cf2fb64589f36ebdb801bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8483586260180651732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468530239225202200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201953c62b816954c89aa91b5b632693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40

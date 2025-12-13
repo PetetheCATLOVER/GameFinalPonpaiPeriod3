@@ -1727,7 +1727,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasPowerup: 0
-  moveSpeed: 20
+  projectilePrefab: {fileID: 6468530239225202200, guid: 863bd1573a6524cb8b329da2962dfa61, type: 3}
+  moveSpeed: 10
   turnSpeed: 100
 --- !u!4 &1820669303 stripped
 Transform:
@@ -1794,8 +1795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c226247a5ee9749c29b925142440c5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6468530239225202200, guid: 863bd1573a6524cb8b329da2962dfa61, type: 3}
-  firePoint: {fileID: 1503072171}
+  projectilePrefab: {fileID: 0}
+  firePoint: {fileID: 0}
   shootForce: 1200
   fireRate: 0.3
 --- !u!1 &1962396647
