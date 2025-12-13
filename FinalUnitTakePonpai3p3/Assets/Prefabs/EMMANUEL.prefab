@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3529816266255373623}
   - component: {fileID: 8671627752116829296}
   - component: {fileID: -5428964177621254628}
-  - component: {fileID: -8894731644458782962}
+  - component: {fileID: -1666268350018053888}
   m_Layer: 0
   m_Name: EMMANUEL
   m_TagString: Untagged
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a2d822c85a775549a2e4dd6fab30900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-8894731644458782962
+--- !u!114 &-1666268350018053888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,12 +411,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760852b131518414e8dd13cb570f847f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
-  range: 8
+  moveSpeed: 7
+  range: 300
   minWaitTime: 1
-  maxWaitTime: 3
-  raycastHeight: 5
-  destroyOnHit: 1
+  maxWaitTime: 5
 --- !u!1 &6814453173325155910
 GameObject:
   m_ObjectHideFlags: 0
