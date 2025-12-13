@@ -249,7 +249,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232303504}
-  - component: {fileID: 232303503}
   - component: {fileID: 232303505}
   m_Layer: 0
   m_Name: NPCSpawner (4)
@@ -258,23 +257,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &232303503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232303502}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbcc2a76df1ecc4aaa8c58ac5e7eef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
-  spawnAmount: 25
-  spawnAreaSize: {x: 400, y: 200}
-  raycastHeight: 50
-  spawnYOffset: 1.2
 --- !u!4 &232303504
 Transform:
   m_ObjectHideFlags: 0
@@ -283,8 +265,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232303502}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.3, y: 15.5, z: 301.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 74.3, y: 5.94, z: 295.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -304,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NpcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
   spawnInterval: 2
-  spawnpoint: {fileID: 232303504}
+  spawnpoint: {fileID: 1172437225}
 --- !u!1001 &364057063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -950,6 +932,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922c8f36fdf3de34386c9a42e109236d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1172437225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4794665768164125277, guid: c2796210dffbd8643bc98b6b5d9a47d1, type: 3}
+  m_PrefabInstance: {fileID: 364057063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1192877314 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1836542912698466379, guid: 740da64d4ffb5384f97db97734d92c42, type: 3}
@@ -1357,8 +1344,8 @@ Transform:
   - {fileID: 974359750}
   - {fileID: 1353452959}
   - {fileID: 1992088998}
-  - {fileID: 1251863358}
   - {fileID: 1204803516}
+  - {fileID: 1251863358}
   - {fileID: 888293509}
   - {fileID: 1330543226}
   - {fileID: 394480533}
@@ -1390,8 +1377,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409607453}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -97.7, y: 36.2, z: 106.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -53.3, y: 6.15, z: 127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1411,7 +1398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NpcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
   spawnInterval: 2
-  spawnpoint: {fileID: 1409607455}
+  spawnpoint: {fileID: 1353452959}
 --- !u!1 &1422451529 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1637439550406568237, guid: 740da64d4ffb5384f97db97734d92c42, type: 3}
@@ -1521,6 +1508,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1014797949310951927, guid: e7db4011ca7f11c408c1ad18b34ed04d, type: 3}
   m_PrefabInstance: {fileID: 1484089206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1503072170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503072171}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1503072171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503072170}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.186, z: 2.283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1820669303}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1507687244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1548,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1507687246}
-  - component: {fileID: 1507687245}
   - component: {fileID: 1507687247}
   m_Layer: 0
   m_Name: NPCSpawner (2)
@@ -1539,23 +1556,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1507687245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507687244}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbcc2a76df1ecc4aaa8c58ac5e7eef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
-  spawnAmount: 25
-  spawnAreaSize: {x: 400, y: 200}
-  raycastHeight: 50
-  spawnYOffset: 1.2
 --- !u!4 &1507687246
 Transform:
   m_ObjectHideFlags: 0
@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NpcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
   spawnInterval: 15
-  spawnpoint: {fileID: 1507687246}
+  spawnpoint: {fileID: 1172437225}
 --- !u!1 &1667694207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,7 +1595,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1667694209}
-  - component: {fileID: 1667694208}
   - component: {fileID: 1667694210}
   m_Layer: 0
   m_Name: NPCSpawner (3)
@@ -1604,23 +1603,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1667694208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667694207}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cbcc2a76df1ecc4aaa8c58ac5e7eef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
-  spawnAmount: 25
-  spawnAreaSize: {x: 400, y: 200}
-  raycastHeight: 50
-  spawnYOffset: 1.2
 --- !u!4 &1667694209
 Transform:
   m_ObjectHideFlags: 0
@@ -1630,7 +1612,7 @@ Transform:
   m_GameObject: {fileID: 1667694207}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.8, y: -350, z: 36.8}
+  m_LocalPosition: {x: -21.3, y: 6.9, z: 36.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1650,7 +1632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NpcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
   spawnInterval: 2
-  spawnpoint: {fileID: 1667694209}
+  spawnpoint: {fileID: 1172437225}
 --- !u!1001 &1742408053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1709,7 +1691,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 428284, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1503072171}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 194810, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
       insertIndex: -1
@@ -1720,6 +1705,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 194810, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1820669308}
+    - targetCorrespondingSourceObject: {fileID: 194810, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1820669312}
   m_SourcePrefab: {fileID: 100100000, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
 --- !u!1 &1820669294 stripped
 GameObject:
@@ -1794,6 +1782,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.1628075, y: 2.268413, z: 5.323662}
   m_Center: {x: 0, y: 1.4060061, z: 0}
+--- !u!114 &1820669312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820669294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c226247a5ee9749c29b925142440c5c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6468530239225202200, guid: 863bd1573a6524cb8b329da2962dfa61, type: 3}
+  firePoint: {fileID: 1503072171}
+  shootForce: 1200
+  fireRate: 0.3
 --- !u!1 &1962396647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,7 +2383,7 @@ SceneRoots:
   - {fileID: 1742408053}
   - {fileID: 1962396649}
   - {fileID: 364057063}
-  - {fileID: 1409607455}
   - {fileID: 1507687246}
   - {fileID: 1667694209}
+  - {fileID: 1409607455}
   - {fileID: 232303504}

@@ -18,14 +18,11 @@ public class NpcSpawner1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Intentionally left empty
     }
-
 
     void SpawnNpc()
     {
-        Instantiate(NpcPrefab, spawnpoint.position, spawnpoint.rotation);
-        
-    
+        Instantiate(NpcPrefab, spawnpoint.position + Vector3.up * 5f, spawnpoint.rotation);
     }
 }
