@@ -4,8 +4,10 @@ public class NpcSpawner : MonoBehaviour
 {
     public GameObject npcPrefab;
     public int spawnAmount = 10;
+
     public Vector2 spawnAreaSize = new Vector2(100, 100);
-    public LayerMask roadLayer;  // assign Road layer in Inspector
+    public float raycastHeight = 50f;
+    public float spawnYOffset = 1.2f; // adjust if needed
 
     void Start()
     {
@@ -16,35 +18,24 @@ public class NpcSpawner : MonoBehaviour
     {
         for (int i = 0; i < spawnAmount; i++)
         {
-            Vector3 spawnPos = GetValidSpawnPosition();
-            Instantiate(npcPrefab, spawnPos + Vector3.up * 6f, Quaternion.identity);
+            Vector3 randomPos = new Vector3(
+                Random.Range(-spawnAreaSize.x / 2f, spawnAreaSize.x / 2f),
+                raycastHeight,
+                Random.Range(-spawnAreaSize.y / 2f, spawnAreaSize.y / 2f)
+            );
+
+            RaycastHit hit;
+
+            if (Physics.Raycast(randomPos, Vector3.down, out hit, 200f))
+            {
+                // Do NOT spawn on roads
+                if (hit.collider.gameObject.layer != LayerMask.NameToLayer("Road"))
+                {
+                    Vector3 spawnPos = hit.point + Vector3.up * 5f;
+                    Instantiate(npcPrefab, spawnPos, Quaternion.identity);
+
+                }
+            }
         }
-    }
-
-    Vector3 GetValidSpawnPosition()
-    {
-        Vector3 pos;
-        int safety = 0; // avoid infinite loops
-
-        do
-        {
-            float x = Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2);
-            float z = Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2);
-
-            pos = new Vector3(x, 0, z);
-            safety++;
-
-            // Prevent endless checking if something goes wrong
-            if (safety > 50) break;
-
-        } while (IsOnRoad(pos));
-
-        return pos;
-    }
-
-    bool IsOnRoad(Vector3 position)
-    {
-        // raycast down to see if it hits the road layer
-        return Physics.Raycast(position + Vector3.up * 10f, Vector3.down, 20f, roadLayer);
     }
 }

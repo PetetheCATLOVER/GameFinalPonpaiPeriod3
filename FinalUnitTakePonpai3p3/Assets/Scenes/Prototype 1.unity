@@ -272,9 +272,8 @@ MonoBehaviour:
   npcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
   spawnAmount: 80
   spawnAreaSize: {x: 400, y: 200}
-  roadLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  raycastHeight: 50
+  spawnYOffset: 1.2
 --- !u!4 &232303504
 Transform:
   m_ObjectHideFlags: 0
@@ -1382,9 +1381,8 @@ MonoBehaviour:
   npcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
   spawnAmount: 80
   spawnAreaSize: {x: 400, y: 200}
-  roadLayer:
-    serializedVersion: 2
-    m_Bits: 8
+  raycastHeight: 50
+  spawnYOffset: 1.2
 --- !u!4 &1409607455
 Transform:
   m_ObjectHideFlags: 0
@@ -1541,9 +1539,8 @@ MonoBehaviour:
   npcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
   spawnAmount: 80
   spawnAreaSize: {x: 400, y: 200}
-  roadLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  raycastHeight: 50
+  spawnYOffset: 1.2
 --- !u!4 &1507687246
 Transform:
   m_ObjectHideFlags: 0
@@ -1591,9 +1588,8 @@ MonoBehaviour:
   npcPrefab: {fileID: 6764765301494536942, guid: 8cc8c86f3c1fcbb4f8b0c333d5308359, type: 3}
   spawnAmount: 80
   spawnAreaSize: {x: 400, y: 200}
-  roadLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  raycastHeight: 50
+  spawnYOffset: 1.2
 --- !u!4 &1667694209
 Transform:
   m_ObjectHideFlags: 0
@@ -1712,7 +1708,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820669294}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1785,8 +1781,8 @@ MonoBehaviour:
   player: {fileID: 1820669303}
   spawnRadius: 80
   carsPerWave: 5
-  timeBetweenWaves: 10
   raycastHeight: 50
+  spawnYOffset: 1.5
 --- !u!4 &1962396649
 Transform:
   m_ObjectHideFlags: 0

@@ -7,23 +7,10 @@ public class CarWaveSpawner : MonoBehaviour
 
     public float spawnRadius = 80f;
     public int carsPerWave = 5;
-    public float timeBetweenWaves = 10f;
     public float raycastHeight = 50f;
+    public float spawnYOffset = 1.5f;
 
-    private float timer;
-
-    void Update()
-    {
-        timer += Time.deltaTime;
-
-        if (timer >= timeBetweenWaves)
-        {
-            SpawnWave();
-            timer = 0f;
-        }
-    }
-
-    void SpawnWave()
+    public void SpawnWave()
     {
         for (int i = 0; i < carsPerWave; i++)
         {
@@ -36,7 +23,14 @@ public class CarWaveSpawner : MonoBehaviour
             {
                 if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Road"))
                 {
-                    Instantiate(enemyCarPrefab, hit.point, hit.transform.rotation);
+                    Vector3 spawnPos = hit.point + Vector3.up * spawnYOffset;
+
+                    Quaternion rotation = Quaternion.LookRotation(
+                        player.position - hit.point,
+                        Vector3.up
+                    );
+
+                    Instantiate(enemyCarPrefab, spawnPos, rotation);
                 }
             }
         }
