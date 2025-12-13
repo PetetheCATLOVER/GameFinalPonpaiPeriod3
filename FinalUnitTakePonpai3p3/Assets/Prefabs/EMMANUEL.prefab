@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3529816266255373623}
   - component: {fileID: 8671627752116829296}
   - component: {fileID: -5428964177621254628}
-  - component: {fileID: -1666268350018053888}
+  - component: {fileID: -8060639186536083096}
   m_Layer: 0
   m_Name: EMMANUEL
   m_TagString: Untagged
@@ -273,7 +273,7 @@ Transform:
   m_GameObject: {fileID: 6764765301494536942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.28, z: 10}
+  m_LocalPosition: {x: -0.11, y: 4.28, z: 10}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -383,7 +383,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a2d822c85a775549a2e4dd6fab30900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1666268350018053888
+--- !u!114 &-8060639186536083096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,13 +408,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 6764765301494536942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 760852b131518414e8dd13cb570f847f, type: 3}
+  m_Script: {fileID: 11500000, guid: 132a495ad8cf8473a89f37543ae6e468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
-  range: 300
+  moveSpeed: 10
+  range: 100
   minWaitTime: 1
-  maxWaitTime: 5
+  maxWaitTime: 4
+  raycastHeight: 5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &6814453173325155910
 GameObject:
   m_ObjectHideFlags: 0

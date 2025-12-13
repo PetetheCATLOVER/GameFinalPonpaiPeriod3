@@ -299,6 +299,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flooring
       objectReference: {fileID: 0}
+    - target: {fileID: 973758679516555283, guid: c2796210dffbd8643bc98b6b5d9a47d1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 973758679516555283, guid: c2796210dffbd8643bc98b6b5d9a47d1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4794665768164125277, guid: c2796210dffbd8643bc98b6b5d9a47d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.766022
@@ -1728,7 +1736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasPowerup: 0
   projectilePrefab: {fileID: 6468530239225202200, guid: 863bd1573a6524cb8b329da2962dfa61, type: 3}
-  moveSpeed: 10
+  moveSpeed: 20
   turnSpeed: 100
 --- !u!4 &1820669303 stripped
 Transform:
@@ -1795,8 +1803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c226247a5ee9749c29b925142440c5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  projectilePrefab: {fileID: 6468530239225202200, guid: 863bd1573a6524cb8b329da2962dfa61, type: 3}
+  firePoint: {fileID: 1503072171}
   shootForce: 1200
   fireRate: 0.3
 --- !u!1 &1962396647
