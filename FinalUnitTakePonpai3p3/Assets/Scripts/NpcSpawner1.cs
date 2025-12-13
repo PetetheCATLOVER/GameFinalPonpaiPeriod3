@@ -6,13 +6,13 @@ public class NpcSpawner1 : MonoBehaviour
     public GameObject NpcPrefab;
 
     [Header("Spawn Settings")]
-    public float spawnInterval = 2f;
+    public float spawnInterval = 10f;
     public Transform spawnpoint;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating(nameof(SpawnNpc), 0f, spawnInterval);
+        InvokeRepeating(nameof(SpawnNpc), 10f, spawnInterval);
     }
 
     // Update is called once per frame
@@ -21,8 +21,11 @@ public class NpcSpawner1 : MonoBehaviour
         
     }
 
+
     void SpawnNpc()
     {
         Instantiate(NpcPrefab, spawnpoint.position, spawnpoint.rotation);
+        
+    
     }
 }

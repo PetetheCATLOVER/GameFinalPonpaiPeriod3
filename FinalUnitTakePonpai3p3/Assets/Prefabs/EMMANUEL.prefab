@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 8671627752116829296}
   - component: {fileID: -5428964177621254628}
   - component: {fileID: 2179556343489817629}
+  - component: {fileID: 7690609879321198797}
   m_Layer: 0
   m_Name: EMMANUEL
   m_TagString: Untagged
@@ -368,7 +369,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6764765301494536942}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -411,6 +412,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f1842f95cd34062a0ea80bb4466d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7690609879321198797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6764765301494536942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737fd02d947b2d74097b2e5e370c05cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  range: 300
+  minWaitTime: 0.5
+  maxWaitTime: 2
 --- !u!1 &6814453173325155910
 GameObject:
   m_ObjectHideFlags: 0
