@@ -30,3 +30,4 @@ public class CarShooter : MonoBehaviour
         rb.AddForce(firePoint.forward * shootForce);
     }
 }
+ 
