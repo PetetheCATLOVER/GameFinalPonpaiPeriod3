@@ -6341,40 +6341,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629278693}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1656239117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1656239118}
-  m_Layer: 0
-  m_Name: (scroll from L->R) this is just a message for you Daniel, finish my modifications
-    to the projectile code on player controller & change the interval of the npcs
-    spawning. btw this is coming from me Emannuel, thx bye /(^-^)/ (you can delete
-    this afterwards)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1656239118
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656239117}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.043935984, y: 10.05775, z: -7.374035}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1661421821
 GameObject:
   m_ObjectHideFlags: 0
@@ -8054,5 +8020,4 @@ SceneRoots:
   - {fileID: 1409607455}
   - {fileID: 232303504}
   - {fileID: 203627066}
-  - {fileID: 1656239118}
   - {fileID: 505942633}
