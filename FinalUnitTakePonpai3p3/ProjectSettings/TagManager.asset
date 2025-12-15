@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Powerup
   - Ground
+  - Projectile
   layers:
   - Default
   - TransparentFX
