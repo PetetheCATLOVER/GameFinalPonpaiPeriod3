@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     public bool hasPowerup = false;
     private float powerupStrength = 15.0f;
     public GameObject projectilePrefab;
+    public float spawnDistance = 2f;
     
 
     public float moveSpeed = 10f;
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Launch a projectile from the player
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, transform.position + transform.forward * spawnDistance, transform.rotation);
         }
     }
 
